@@ -1,12 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Index</title>
 </head>
-<body>
-    
+
+<body class="bg-[#6A6A6A]">
+    <header style="background-image: url(images/banniere_site.jpg);" class="bg-[#505050] bg-fixed bg-top flex flex-col items-center">
+        <h1 class="pt-20 text-4xl font-extrabold text-white">UFC</h1>
+        <div class=" pt-20 pb-3 pr-5 w-[100%] flex justify-end">
+                <button class="relative group md:hidden" id="clk">
+                  <div class="relative flex items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all bg-slate-700 ring-0 ring-gray-300 hover:ring-8 group-focus:ring-4 ring-opacity-30 duration-200 shadow-md">
+                    <div class="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 group-focus:-rotate-[45deg] origin-center">
+                      <div class="bg-white h-[2px] w-1/2 rounded transform transition-all duration-300 group-focus:-rotate-90 group-focus:h-[1px] origin-right delay-75 group-focus:-translate-y-[1px]"></div>
+                      <div class="bg-white h-[1px] rounded"></div>
+                      <div class="bg-white h-[2px] w-1/2 rounded self-end transform transition-all duration-300 group-focus:-rotate-90 group-focus:h-[1px] origin-left delay-75 group-focus:translate-y-[1px]"></div>
+                    </div>
+                  </div>
+                </button>
+        </div>
+        
+    </header>
+    <main style="background-image: url(images/ring.jpg);" class="flex flex-col bg-cover bg-fixed">
+        <nav class="max-md:hidden bg-[#ECE543] rounded-b-md mx-10" id="nav1">
+            <ul class="pl-10 pt-5 pb-5 pr-10 flex flex-col gap-5 max-md:items-align max-md:justify-center ">
+                <li class="pb-2 border-b-2 border-black"><a href="combattants.html">Nos guerriers</a></li>
+                <li class="pb-2 border-b-2 border-black"><a href="evenements.html">Calendrier</a></li>
+                <li class="pb-2 border-b-2 border-black"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <section class="bg-[#505050] mx-[15%]">
+            <article class="px-[5%] flex flex-col items-center">
+            <img src="images/banniere.jpg" alt="ring UFC" class="pt-5">
+            <h2 class="pt-2 text-white font-bold text-3xl">SPIRIT OF SPORT</h2>
+            <img src="images/cyril.jpg" alt="combattant content" class="pt-3 w-[90%] max-md:hidden">
+            <p class="pt-2 text-white font-bold text-3xl">SEEK THE GLORY</p>
+            </article>
+            <article class="flex flex-row justify-around pt-5 pb-10">
+                <img src="images/raquel.jpg" alt="Raquel Pennington" class="w-[40%]">
+                <img src="images/pubic.jpg" alt="photo du public" class="w-[40%]">
+            </article>
+        </section>
+    </main>
+    <footer>
+        <nav class="bg-[#ECE543] ">
+            <ul class="pl-10 pt-5 pb-5 pr-10 flex flex-col gap-5 max-md:items-align max-md:justify-center ">
+                <li class="pb-2 border-b-2 border-black"><a href="combattants.html">Nos guerriers</a></li>
+                <li class="pb-2 border-b-2 border-black"><a href="evenements.html">Calendrier</a></li>
+                <li class="pb-2 border-b-2 border-black"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script src="JS/script.js"></script>
 </body>
+
 </html>
