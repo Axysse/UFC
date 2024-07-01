@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combattants</title>
+    <link href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <body class="bg-[#6A6A6A]">
+        <header style="background-image: url(images/0x0.webp);" class="bg-[#505050] bg-fixed bg-top flex flex-col items-center">
+            <h1 class="pt-20 text-4xl font-extrabold text-white">UFC</h1>
+            <div class=" pt-20 pb-3 pr-5 w-[100%] flex justify-end">
+                    <button class="relative group md:hidden" id="clk">
+                      <div class="relative flex items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all bg-slate-700 ring-0 ring-gray-300 hover:ring-8 group-focus:ring-4 ring-opacity-30 duration-200 shadow-md">
+                        <div class="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 group-focus:-rotate-[45deg] origin-center">
+                          <div class="bg-white h-[2px] w-1/2 rounded transform transition-all duration-300 group-focus:-rotate-90 group-focus:h-[1px] origin-right delay-75 group-focus:-translate-y-[1px]"></div>
+                          <div class="bg-white h-[1px] rounded"></div>
+                          <div class="bg-white h-[2px] w-1/2 rounded self-end transform transition-all duration-300 group-focus:-rotate-90 group-focus:h-[1px] origin-left delay-75 group-focus:translate-y-[1px]"></div>
+                        </div>
+                      </div>
+                    </button>
+            </div>
+            
+        </header>
+        <main style="background-image: url(images/ring.jpg);" class="flex flex-col bg-cover bg-fixed">
+            <nav class="max-md:hidden bg-[#F3CA20] rounded-md border-8 border-[#6A6A6A] mx-10" id="nav1">
+                <ul class="pl-10 pt-5 pb-5 pr-10 flex flex-col max-md:gap-5 md:flex-row md:justify-around max-md:items-align max-md:justify-center ">
+                    <li class="pb-2 border-b-2 border-black"><a href="index.html">Accueil</a></li>
+                    <li class="pb-2 border-b-2 border-black"><a href="evenements.html">Calendrier</a></li>
+                    <li class="pb-2 border-b-2 border-black"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <section class="bg-[#2b2b29] md:mx-[15%]">
+                <div class="px-10 py-5 text-white" id='calendar'></div>
+                <article class="w-[100%] flex justify-center pb-5 ">
+                    <div class="mx-[5%]" id="wrapper"></div>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <nav class="bg-[#F3CA20]">
+                <ul class="pl-10 pt-5 pb-5 pr-10 flex flex-col gap-5 max-md:items-align max-md:justify-center ">
+                    <li class="pb-2 border-b-2 border-black"><a href="index.html">Accueil</a></li>
+                    <li class="pb-2 border-b-2 border-black"><a href="evenements.html">Calendrier</a></li>
+                    <li class="pb-2 border-b-2 border-black"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.umd.js"></script>
+        <script src="JS/script_combat.js"></script>
+</body>
+</html>

@@ -1,47 +1,69 @@
-let date = Date.now();
-console.log(date);
+// let date = Date.now();
+// console.log(date);
 
-let date1 = new Date();
-dateUTC = date1.toISOString();
-console.log(dateUTC)
+// let date1 = new Date();
+// dateUTC = date1.toISOString();
+// console.log(dateUTC)
 
-let tout = [];
+// // let tout = [];
 
-async function mainEvent() {
-    let reponse = await fetch("JSON/dates.json");
-    let event = await reponse.json();
-    event.forEach(element => {
-        if (element.Day > dateUTC) {
-            tout.push(element);
-        }
-    })
-    console.log(tout);
-    
-}
+// async function mainEvent() {
+//     let reponse = await fetch("JSON/dates.json");
+//     let event = await reponse.json();
+//     event.forEach(element => {
+//         if (element.Day > dateUTC) {
+//             tout.push(element);
+//         }
+//     })
+//     console.log(tout);
 
-mainEvent();
+// }
+
+// let len = tout.Arraylength;
+// let JPP = [];
+
+// for (let i = 0; i < tout.length; i++) {
+//     JPP.push({
+//         tout[i].ShortName ,
+//         tout[i].Day
+//     });
+// };
+// console.log(JPP[0])
+
+// mainEvent();
 
 
 document.addEventListener('DOMContentLoaded', function () {
+    let zbi = [];
+    fetch("./JSON/dates.json")
+        .then(res => res.json())
+        .then(datas => {
+            console.log(datas);
+        
+        for ( let j = 0; j < datas.length; j++) {
+            zbi.push({ title: datas[j].ShortName, start: datas[j].Day, color: 'red', });
+        }
 
-    fetch("JSON/dates.json")
-    .then(res => res.json())
-    .then (res => {
-        var calendarEl = document.getElementById('calendar');
-    var calendar = new FullCalendar.Calendar(calendarEl, {
-        initialView: 'dayGridMonth',
-        for (i = 0; i < tout.lenght; i++) {
-        events: [
-            {
-            title :  tout[0].ShortName,
-            start : tout[0].Day
-            }
-        ]
-    }
-    });
-     calendar.render();
-})})
-    
+
+            let calendarEl = document.getElementById('calendar');
+            let calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                events: zbi,
+            })
+            calendar.render();
+            console.log(zbi);
+        })
+
+}
+)
+
+
+
+
+
+
+
+
 //     var calendarEl = document.getElementById('calendar');
 //     var calendar = new FullCalendar.Calendar(calendarEl, {
 //         initialView: 'dayGridMonth'
@@ -53,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
+// for (i = 0; i < tout.lenght; i++) {
 
 
 

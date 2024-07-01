@@ -38,9 +38,7 @@ async function mainEvent() {
     event.forEach(element => {
         if (element.Day > dateUTC) {
             all.push(element);
-
         }
-
     })
 
     console.log(all)
