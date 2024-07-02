@@ -21,7 +21,7 @@ new gridjs.Grid({
         name: "Nom"
     }, {
         id: "Birth",
-        name: "Age"
+        name: "Date de naissance"
     }, {
         id: "Height",
         name: "Taille"
@@ -34,10 +34,19 @@ new gridjs.Grid({
     }, {
         id: "Losses",
         name: "Défaites"
-    }],
+    }, {
+        name: "Détails",
+        formatter: (cell, row) => {
+            return gridjs.h('button', {
+              className: 'py-2 mb-4 px-4 border rounded-md text-white bg-blue-600',
+              onClick: () => alert(`Editing "${row.cells[0].data}" "${row.cells[1].data}"`)
+            }, 'Edit');
+    }},],
+    sort: true,
     search: true,
     pagination : true,
     data: all,
   }).render(document.getElementById("wrapper"));
 })
 })
+
