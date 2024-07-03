@@ -41,42 +41,13 @@
                     <li class="pb-2 border-b-2 border-black font-mono font-bold"><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <section class="bg-[#2b2b29]">
-                <article class="px-10 py-5 text-white" id='calendar'></article>
+            <section class="bg-[#2b2b29] flex-col items-center justify-center">
+                <article class="bg-[#2b2b29] bg-cover px-10 py-5 text-white" id='calendar'></article>
+                <button class="flex justify-center items-center bg-white" id="para" type="button">Paradise</button>
             </section>
         </main>
-        <footer class="flex flex-col">
-            <nav class="max-md:hidden bg-[#F3CA20] rounded-md border-8 border-[#6A6A6A] mx-10" id="nav1">
-                <ul
-                    class="pl-10 pt-5 pb-5 pr-10 flex flex-col max-md:gap-5 md:flex-row md:justify-around max-md:items-align max-md:justify-center ">
-                    <li class="pb-2 border-b-2 border-black font-mono font-bold"><a href="index.html">Acceuil</a></li>
-                    <li class="pb-2 border-b-2 border-black font-mono font-bold"><a href="combattants.html">Nos guerriers</a></li>
-                    <li class="pb-2 border-b-2 border-black font-mono font-bold"><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <nav class="bg-black text-white">
-                <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-                    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a
-                            href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
-                    </span>
-                    <ul
-                        class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
-                        <li>
-                            <a href="#" class="hover:underline me-4 md:me-6">About</a>
-                        </li>
-                        <li>
-                            <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
-                        </li>
-                        <li>
-                            <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
-                        </li>
-                        <li>
-                            <a href="#" class="hover:underline">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </footer>
+        <div w3-include-html="footer.html"></div>
+        <script src="JS/include.js"></script>
         <script src="JS/script_calendrier.js"></script>
         <script src="JS/script.js"></script>
     </body>

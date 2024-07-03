@@ -35,6 +35,16 @@ display = menu.addEventListener("click", () => {
     }
 });
 
+const comm = document.getElementById("btn1")
+const commu = document.getElementById("commu");
+
+ dis = commu.addEventListener("click", () => {
+    if (comm.classList.contains("hidden")) {
+        comm.classList.remove("hidden");
+    } else {
+        comm.classList.add("hidden")
+    }
+});
 
 
 

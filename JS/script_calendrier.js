@@ -57,7 +57,14 @@ document.addEventListener('DOMContentLoaded', function () {
 }
 )
 
-
+para = document.getElementById("para");
+para.addEventListener("click", () => {
+    if (para.innerHTML = "paradise") {
+    document.getElementById('calendar').style.backgroundImage="url(./images/Vince.png)";
+    para.innerHTML = "Retour sur terre";
+    }
+    console.log("T'a appuyé, t'aurais pas dû.")
+})
 
 
 

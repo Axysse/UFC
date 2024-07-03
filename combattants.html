@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,28 +8,40 @@
     <link href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/gridjs/plugins/selection/dist/selection.umd.js"></script>
+    <link href="CSS/style.css" rel="stylesheet">
 </head>
+
 <body>
+
     <body class="bg-[#6A6A6A]">
-        <header style="background-image: url(images/Banner.jpg);" class="bg-[#505050] bg-center flex flex-col items-center">
+        <header style="background-image: url(images/Banner.jpg);"
+            class="bg-[#505050] bg-center flex flex-col items-center">
             <div class=" pt-20 pb-3 pr-5 w-[100%] flex justify-end">
-                    <button class="relative group md:hidden" id="clk">
-                      <div class="relative flex items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all bg-slate-700 ring-0 ring-gray-300 hover:ring-8 group-focus:ring-4 ring-opacity-30 duration-200 shadow-md">
-                        <div class="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 group-focus:-rotate-[45deg] origin-center">
-                          <div class="bg-white h-[2px] w-1/2 rounded transform transition-all duration-300 group-focus:-rotate-90 group-focus:h-[1px] origin-right delay-75 group-focus:-translate-y-[1px]"></div>
-                          <div class="bg-white h-[1px] rounded"></div>
-                          <div class="bg-white h-[2px] w-1/2 rounded self-end transform transition-all duration-300 group-focus:-rotate-90 group-focus:h-[1px] origin-left delay-75 group-focus:translate-y-[1px]"></div>
+                <button class="relative group md:hidden" id="clk">
+                    <div
+                        class="relative flex items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all bg-slate-700 ring-0 ring-gray-300 hover:ring-8 group-focus:ring-4 ring-opacity-30 duration-200 shadow-md">
+                        <div
+                            class="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 group-focus:-rotate-[45deg] origin-center">
+                            <div
+                                class="bg-white h-[2px] w-1/2 rounded transform transition-all duration-300 group-focus:-rotate-90 group-focus:h-[1px] origin-right delay-75 group-focus:-translate-y-[1px]">
+                            </div>
+                            <div class="bg-white h-[1px] rounded"></div>
+                            <div
+                                class="bg-white h-[2px] w-1/2 rounded self-end transform transition-all duration-300 group-focus:-rotate-90 group-focus:h-[1px] origin-left delay-75 group-focus:translate-y-[1px]">
+                            </div>
                         </div>
-                      </div>
-                    </button>
+                    </div>
+                </button>
             </div>
-            
+
         </header>
         <main style="background-image: url(images/ring.jpg);" class="flex flex-col bg-cover bg-fixed">
             <nav class="max-md:hidden bg-[#F3CA20] rounded-md border-8 border-[#6A6A6A] mx-10" id="nav1">
-                <ul class="pl-10 pt-5 pb-5 pr-10 flex flex-col max-md:gap-5 md:flex-row md:justify-around max-md:items-align max-md:justify-center ">
+                <ul
+                    class="pl-10 pt-5 pb-5 pr-10 flex flex-col max-md:gap-5 md:flex-row md:justify-around max-md:items-align max-md:justify-center ">
                     <li class="pb-2 border-b-2 border-black font-mono font-bold"><a href="index.html">Accueil</a></li>
-                    <li class="pb-2 border-b-2 border-black font-mono font-bold"><a href="evenements.html">Calendrier</a></li>
+                    <li class="pb-2 border-b-2 border-black font-mono font-bold"><a
+                            href="evenements.html">Calendrier</a></li>
                     <li class="pb-2 border-b-2 border-black font-mono font-bold"><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -37,39 +50,41 @@
                 <article class="w-[100%] flex justify-center pb-5 ">
                     <div class="mx-[5%]" id="wrapper"></div>
                 </article>
+
+                <button id="openModalButton" class="px-4 py-2 text-white bg-indigo-500 rounded">
+                    Open Modal
+                  </button>
+
+                <dialog data-backdrop="false" id="modal" class="relative p-6 bg-white rounded-lg shadow-lg">
+                    <button id="closeModalButtonTop" class="close-button">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-700 hover:text-gray-900" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </button>
+                    <h2 class="mb-4 text-lg font-semibold">Modal Title</h2>
+                    <p id="mod"></p>
+                    <p class="mb-4 text-gray-700"> Recherche un gladiateur
+                      <input id="search" type="text" class="border-2 border-black">
+                    </p>
+                    <div class="flex justify-end space-x-2">
+                      <button id="secondaryActionButton" class="px-4 py-2 text-white bg-gray-500 rounded">
+                        Recherche
+                      </button>
+                      <button id="closeModalButtonBottom" class="px-4 py-2 text-white bg-indigo-500 rounded">
+                        Close
+                      </button>
+                    </div>
+                  </dialog>
+
+
             </section>
         </main>
-        <footer>
-            <nav class="max-md:hidden bg-[#F3CA20] rounded-md border-8 border-[#6A6A6A] mx-10" id="nav1">
-                <ul class="pl-10 pt-5 pb-5 pr-10 flex flex-col max-md:gap-5 md:flex-row md:justify-around max-md:items-align max-md:justify-center ">
-                    <li class="pb-2 border-b-2 border-black font-mono font-bold"><a href="index.html">Accueil</a></li>
-                    <li class="pb-2 border-b-2 border-black font-mono font-bold"><a href="evenements.html">Calendrier</a></li>
-                    <li class="pb-2 border-b-2 border-black font-mono font-bold"><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <nav class="bg-black text-white">
-                <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
-        </span>
-        <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
-            <li>
-                <a href="#" class="hover:underline me-4 md:me-6">About</a>
-            </li>
-            <li>
-                <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
-            </li>
-            <li>
-                <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
-            </li>
-            <li>
-                <a href="#" class="hover:underline">Contact</a>
-            </li>
-        </ul>
-        </div>
-            </nav>
-        </footer>
+        <div w3-include-html="footer.html"></div>
+        <script src="JS/include.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.umd.js"></script>
         <script src="JS/script_combat.js"></script>
         <script src="JS/script.js"></script>
-</body>
+    </body>
+
 </html>
