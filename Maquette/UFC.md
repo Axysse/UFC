@@ -33,7 +33,7 @@ Un grand merci à:
  - Contact
 
 ## Index
-![En-tête de la page d'accueil](https://i.postimg.cc/mkcKccQf/index.png)
+![En-tête de la page d'accueil](https://i.postimg.cc/XqdSHGXK/index.png)
 
 
 ## Evenements
