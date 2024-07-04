@@ -50,6 +50,8 @@ document.addEventListener('DOMContentLoaded', function () {
         })
 })
 
+
+
 const modal = document.getElementById("modal");
 const openModalButton = document.getElementById("openModalButton");
 const closeModalButtonTop = document.getElementById(
@@ -97,7 +99,6 @@ secondaryActionButton.addEventListener("click", () => {
             for (let j = 0; j < data.length; j++) {
                 if (data[j].FirstName == search || data[j].LastName == search) {
                     mod.innerText = data[j].FirstName + " " + data[j].LastName + ": " + data[j].Wins + " victoires " + data[j].Losses + " défaites."
-                    console.log("okok");
                     break;
                 } else {
                     mod.innerText = "Erreur"
