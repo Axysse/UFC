@@ -183,6 +183,9 @@ Sinon la page contact ne présente aucune autre particularité.
 Tout droits reservés Nicolas Vouillerot
 
 Linkedin: https://www.linkedin.com/in/nicolas-vouillerot-a62402287/
+
 CoursDuDev: https://www.coursdudev.com/profil/Axysse
+
 GitHub: https://github.com/Axysse
+
 > Written with [StackEdit](https://stackedit.io/).
